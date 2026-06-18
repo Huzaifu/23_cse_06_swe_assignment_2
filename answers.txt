@@ -1,0 +1,11 @@
+Q1. Purpose of modeling:
+In my sequence diagram, I did not include low-level details such as login verification, form validation code, database table fields, payment rules, or the exact email template. I left these details out because the diagram is meant to show the main communication between the user, portal, reservation system, database, and email service. This keeps the model simple and focused on the successful reservation process.
+
+Q2. Sequence diagram:
+The sequence diagram shows the order in which the objects communicate during the reservation process. It makes clear which component sends each request and which component responds, such as the database returning availability to the reservation system. A bullet list can describe the steps, but the diagram shows the timing and responsibility of each system part more clearly.
+
+Q3. State diagram:
+One guarded transition in my state diagram is Confirmed to Cancelled with the label userCancels [at least 1 hour before slot]. This means the reservation can only be cancelled by the user if the cancellation is made at least one hour before the reserved parking time. The guard is necessary because it represents a business rule that controls when cancellation is allowed.
+
+Q4. Sequence vs State:
+The sequence diagram focuses on the interaction and message flow between system components, while the state diagram focuses on how a single parking reservation changes from one state to another during its lifecycle.
